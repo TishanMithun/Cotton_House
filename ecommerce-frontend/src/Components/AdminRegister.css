@@ -1,0 +1,136 @@
+/* AdminRegister.css */
+.register-page {
+  background: #f8f9fa; /* Light background for contrast */
+  min-height: 100vh;
+}
+
+.register-card {
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Same gradient as ClothingGalleryFilter */
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 2.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #000000 !important; /* Black text for labels */
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block !important; /* Ensure labels are visible */
+  line-height: 1.2;
+  opacity: 1 !important; /* Prevent any transparency */
+  z-index: 1; /* Ensure labels are above other elements */
+}
+
+.text-danger {
+  color: #dc3545 !important; /* Red asterisk */
+}
+
+.filter-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-select:focus {
+  border-color: #a777e3;
+  box-shadow: 0 0 8px rgba(167, 119, 227, 0.4);
+  outline: none;
+}
+
+.input-group-text {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  color: #6e8efb;
+  transition: color 0.3s ease;
+}
+
+.input-group-text:hover {
+  color: #a777e3;
+}
+
+.btn-custom {
+  border-radius: 8px;
+  padding: 12px;
+  background: #a777e3;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #8c5fd9;
+}
+
+.btn-custom:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #a777e3;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text-primary {
+  color: #6e8efb !important; /* Match ClothingGalleryFilter */
+  text-decoration: underline;
+}
+
+.text-primary:hover {
+  color: #a777e3 !important;
+}
+
+.text-black {
+  color: #000000 !important; /* Black text for 'Already have an account?' */
+}
+
+@media (max-width: 576px) {
+  .register-card {
+    margin: 15px;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .filter-select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .btn-custom {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+  }
+}

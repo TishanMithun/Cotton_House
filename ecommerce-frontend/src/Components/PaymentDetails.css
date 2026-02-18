@@ -1,0 +1,107 @@
+/* PaymentDetails.css */
+.payment-page {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.payment-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  max-width: 1100px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 4rem;
+}
+
+.custom-select {
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: 2px solid #e9ecef;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-select:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 15px rgba(77, 171, 247, 0.5);
+  outline: none;
+}
+
+.table {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 1.2rem;
+  border: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #4dabf7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text-primary {
+  color: #4dabf7 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+@media (max-width: 768px) {
+  .payment-card {
+    max-width: 90%;
+    margin: 20px;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .custom-select {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}

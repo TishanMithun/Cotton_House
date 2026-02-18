@@ -1,0 +1,249 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #46f008 0%, #09e251 100%);
+  background-attachment: fixed;
+  color: #2d3436;
+  overflow-x: hidden;
+}
+
+/* Container for the gallery content */
+.clothing-gallery {
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+/* Card styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.product-img {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .product-img {
+  transform: scale(1.08);
+}
+
+/* Card content styles */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3436;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  color: #636e72;
+  margin-bottom: 1rem;
+}
+
+/* Button styling */
+.btn-custom {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+.btn-success {
+  background: #28a745;
+  border: none;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  border-color: #2d3436;
+  color: #2d3436;
+}
+
+.btn-outline-dark:hover {
+  background: #2d3436;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 3D Image Container */
+.three-d-container {
+  perspective: 1200px;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f3f5;
+  border-radius: 10px;
+}
+
+.three-d-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.three-d-image:active {
+  cursor: grabbing;
+}
+
+/* Payment Modal Preview Image */
+.preview-img {
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+/* Carousel controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control:first-child {
+  left: 10px;
+}
+
+.carousel-control:last-child {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal backdrop and content */
+.modal {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Quantity and size controls */
+.form-select-lg {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.btn-outline-secondary {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.modal-body span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+/* Alert styling */
+.alert-success {
+  border-radius: 8px;
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Custom heading style */
+.custom-heading {
+  color: rgb(3, 64, 29); /* Use yellow as requested, change to 'green' for green color */
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .product-img {
+    height: 240px;
+  }
+  .three-d-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-img {
+    height: 200px;
+  }
+  .three-d-container {
+    height: 300px;
+  }
+  .preview-img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clothing-gallery {
+    padding: 40px 15px;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .btn-custom {
+    padding: 8px 16px;
+  }
+}

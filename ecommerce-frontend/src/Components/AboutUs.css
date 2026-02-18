@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.about-us-container {
+  background: linear-gradient(135deg, rgb(12, 107, 53), rgb(6, 76, 36)); /* Modern gradient */
+  min-height: 100vh;
+  padding: 50px 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-heading {
+  color: rgb(3, 53, 25); /* Consistent green */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.image-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.image-slider:hover {
+  transform: scale(1.02);
+}
+
+.btn-custom {
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #007bff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #0056b3;
+}
+
+.text-primary {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+.text-primary:hover {
+  color: #0056b3 !important;
+}
+
+/* Decorative overlay for a modern touch */
+.about-us-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/fabric-dark.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 30px 0;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .custom-heading {
+    font-size: 2rem;
+  }
+
+  .image-slider img {
+    max-height: 250px;
+  }
+}

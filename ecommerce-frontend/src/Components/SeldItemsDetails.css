@@ -1,0 +1,74 @@
+.seld-items-details__container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.seld-items-details__card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.seld-items-details__card-header {
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.seld-items-details__card-header h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.seld-items-details__table {
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.seld-items-details__table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+.seld-items-details__table td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.seld-items-details__table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.seld-items-details__table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.seld-items-details__download-btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.seld-items-details__download-btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.seld-items-details__spinner .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #007bff;
+}
+
+.seld-items-details__alert {
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.seld-items-details__table-responsive {
+  border-radius: 8px;
+  overflow-x: auto;
+}

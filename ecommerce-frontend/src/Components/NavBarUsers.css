@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(90deg, #2D423B 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  font-family: 'Poppins', sans-serif;
+  height: 60px; /* Fixed height to match logo container */
+  margin-bottom: 20px; /* Increased bottom margin */
+}
+
+.navbar-brand {
+  color: #2d3436;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.navbar-brand:hover {
+  color: #022d07;
+}
+
+.logo-image {
+  height: 40px; /* Smaller logo height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 8px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(45, 52, 54, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav.ms-auto {
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 8px;
+}
+
+.btn-custom {
+  background: #ffffff;
+  color: #2d3436;
+  border: 1px solid #dfe6e9;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.btn-custom:hover {
+  background: #022d07;
+  color: #fff;
+  border-color: #022d07;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-custom i {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  color: #2d3436;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.modal-content {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+
+
+.modal-header {
+  background: #2d3436;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-body .card {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.modal-body .card:hover {
+  transform: translateY(-5px);
+}
+
+.modal-body .img-fluid {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn-danger {
+  background: #dc3545;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f8e1d9 0%, #a3bffa 100%);
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 8px 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-image {
+    height: 30px; /* Smaller on mobile */
+  }
+
+  .modal-body .img-fluid {
+    max-height: 120px;
+  }
+}
+
